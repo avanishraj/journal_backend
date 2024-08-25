@@ -17,7 +17,7 @@ public class UserService {
         userServiceRepository.save(user);
     }
 
-    public List<User> getAllJournalEntries() {
+    public List<User> getAllUsers() {
         return userServiceRepository.findAll();
     }
 
@@ -29,4 +29,7 @@ public class UserService {
         userServiceRepository.deleteById(id);
     }
 
+    public User findByUserName(String userName){
+        return userServiceRepository.findByUserName(userName);
+    }
 }
